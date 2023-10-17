@@ -6,8 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-final class CreateGamifyTables extends Migration
-{
+return new class () extends Migration {
     public function up(): void
     {
         Schema::create('reputations', function (Blueprint $table): void {
@@ -45,4 +44,4 @@ final class CreateGamifyTables extends Migration
         Schema::dropIfExists('badges');
         Schema::dropIfExists('reputations');
     }
-}
+};

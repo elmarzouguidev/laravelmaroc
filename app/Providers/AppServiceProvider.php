@@ -35,7 +35,7 @@ final class AppServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        date_default_timezone_set('Africa/Douala');
+        date_default_timezone_set('Africa/Casablanca');
         setlocale(LC_TIME, 'fr_FR', 'fr', 'FR', 'French', 'fr_FR.UTF-8');
         setlocale(LC_ALL, 'fr_FR', 'fr', 'FR', 'French', 'fr_FR.UTF-8');
         Carbon::setLocale('fr');
@@ -95,9 +95,9 @@ final class AppServiceProvider extends ServiceProvider
             );
         });
 
-        Filament::registerRenderHook(
+        /*Filament::renderHook(
             'body.start',
             fn (): string => Blade::render('@livewire(\'livewire-ui-modal\')'),
-        );
+        );*/
     }
 }

@@ -6,8 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-final class CreateTagsTable extends Migration
-{
+return new class () extends Migration {
     public function up(): void
     {
         Schema::create('tags', function (Blueprint $table): void {
@@ -29,4 +28,4 @@ final class CreateTagsTable extends Migration
         Schema::dropIfExists('taggables');
         Schema::dropIfExists('tags');
     }
-}
+};

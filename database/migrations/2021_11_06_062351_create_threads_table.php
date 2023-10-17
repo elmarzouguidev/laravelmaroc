@@ -6,8 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-final class CreateThreadsTable extends Migration
-{
+return new class () extends Migration {
     public function up(): void
     {
         Schema::create('threads', function (Blueprint $table): void {
@@ -34,4 +33,4 @@ final class CreateThreadsTable extends Migration
         Schema::dropIfExists('channel_thread');
         Schema::dropIfExists('threads');
     }
-}
+};
